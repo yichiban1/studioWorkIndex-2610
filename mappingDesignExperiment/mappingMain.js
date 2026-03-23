@@ -71,4 +71,4 @@ circleButton.addEventListener("click", drawNewCircle);
 // The range input has min="0" and max="360" attributes
 // This ensures the value is always between 0-360
 // HSL hue values outside 0-360 would still work (they wrap around)
-// but we keep it constrained for clarity
+// but keep it constrained for clarity

@@ -88,24 +88,3 @@ input[type="range"] {
     outline: none;
 }
 
-/* Range thumb styling for WebKit browsers */
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1.25rem;
-    height: 1.25rem;
-    background: var(--col03);
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid var(--col02);
-}
-
-/* Range thumb styling for Firefox */
-input[type="range"]::-moz-range-thumb {
-    width: 1.25rem;
-    height: 1.25rem;
-    background: var(--col03);
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid var(--col02);
-}
