@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>changeMe!!!!</title>
+
+    <script src="https://unpkg.com/konva@10/konva.min.js"></script>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="mappingStyle.css">
+    <script src="mappingMain.js" defer></script>
+</head>
+<body>
+
+<main>
+
+    <div class="toolBar">
+        <button id="circle-button">draw a new circle</button>
+        <!-- Range input (0-360) maps to HSL hue (0-360 degrees) -->
+        <!-- This creates a full color spectrum from red -> green -> blue -> red -->
+        <label for="hue-slider">Hue: <span id="hue-value">0</span></label>
+        <input type="range" id="hue-slider" min="0" max="360" value="0">
+    </div>
+
+    <div class="stageContainer" id="stage-container">
+        <div id="konva-stage"></div>
+    </div>
+
+</main>
+
+</body>
+</html>
