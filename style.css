@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-    /* 马卡龙色系 - 清新柔和 */
+    /* Macaron colors - fresh and soft*/
     --bg: #fefcf8;
     --bg-secondary: #fff9f0;
     --text: #4a4a4a;
     --text-secondary: #7a7a7a;
     --text-muted: #a0a0a0;
     
-    /* 马卡龙强调色 */
+    /* Macaron accent colors */
     --accent-pink: #f4d1d9;
     --accent-blue: #b8d4e3;
     --accent-green: #c8e6d5;
@@ -16,12 +16,12 @@
     --accent-peach: #f8d7c2;
     --accent-mint: #d4f1e0;
     
-    /* 主强调色 */
+    /* Main accent color */
     --accent: #7eb8c2;
     --accent-dark: #5a9aa3;
     --accent-light: #e8f4f6;
     
-    /* 边框和阴影 */
+    /* Borders and shadows */
     --border: #f0ebe3;
     --shadow: rgba(0, 0, 0, 0.04);
 }
@@ -49,7 +49,6 @@ main {
     margin: 0 auto;
 }
 
-/* 标题层次优化 */
 h1 {
     font-size: 2rem;
     font-weight: 500;
@@ -88,14 +87,12 @@ h4 {
     border-left: 3px solid var(--accent-green);
 }
 
-/* 段落优化 */
 p {
     margin-bottom: 1.5rem;
     text-align: justify;
     hyphens: auto;
 }
 
-/* 链接优化 */
 a {
     color: var(--accent-dark);
     text-decoration: none;
@@ -109,7 +106,6 @@ a:hover {
     border-bottom-color: var(--accent-dark);
 }
 
-/* 列表优化 */
 ol, ul {
     padding-left: 1.75rem;
     margin-bottom: 1.5rem;
@@ -124,12 +120,12 @@ li::marker {
     color: var(--accent);
 }
 
-/* 区块优化 */
+/* Block optimization */
 section {
     margin-bottom: 1.5rem;
 }
 
-/* 图片展示优化 */
+/* Image display optimization */
 figure {
     margin: 2.5rem 0;
     background: white;
@@ -161,7 +157,6 @@ figcaption {
     letter-spacing: 0.03em;
 }
 
-/* 响应式优化 */
 @media (max-width: 600px) {
     body {
         padding: 2.5rem 1.5rem;
