@@ -1,0 +1,41 @@
+/* Basic layout */
+body {
+    font-family: sans-serif;
+    background: #1a1a2e;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Button with feedback states */
+#play-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #e94560;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover: brighten */
+#play-button:hover {
+    background: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+/* Active: darken when pressed */
+#play-button:active {
+    background: #c73e54;
+    transform: translateY(0);
+}
+
+/* Focus: outline for accessibility */
+#play-button:focus {
+    outline: 2px solid #ff8e8e;
+}

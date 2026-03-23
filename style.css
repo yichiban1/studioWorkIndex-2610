@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    /* 马卡龙色系 - 清新柔和 */
+    --bg: #fefcf8;
+    --bg-secondary: #fff9f0;
+    --text: #4a4a4a;
+    --text-secondary: #7a7a7a;
+    --text-muted: #a0a0a0;
+    
+    /* 马卡龙强调色 */
+    --accent-pink: #f4d1d9;
+    --accent-blue: #b8d4e3;
+    --accent-green: #c8e6d5;
+    --accent-lavender: #d8d4e8;
+    --accent-peach: #f8d7c2;
+    --accent-mint: #d4f1e0;
+    
+    /* 主强调色 */
+    --accent: #7eb8c2;
+    --accent-dark: #5a9aa3;
+    --accent-light: #e8f4f6;
+    
+    /* 边框和阴影 */
+    --border: #f0ebe3;
+    --shadow: rgba(0, 0, 0, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 100%);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.85;
+    letter-spacing: 0.015em;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* 标题层次优化 */
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--accent-dark);
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1.5px solid var(--accent-blue);
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--accent-green);
+}
+
+/* 段落优化 */
+p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* 链接优化 */
+a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-blue);
+    transition: all 0.25s ease;
+    padding: 0 2px;
+}
+
+a:hover {
+    background: var(--accent-light);
+    border-bottom-color: var(--accent-dark);
+}
+
+/* 列表优化 */
+ol, ul {
+    padding-left: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+    line-height: 1.8;
+}
+
+li::marker {
+    color: var(--accent);
+}
+
+/* 区块优化 */
+section {
+    margin-bottom: 1.5rem;
+}
+
+/* 图片展示优化 */
+figure {
+    margin: 2.5rem 0;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+figcaption {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+/* 响应式优化 */
+@media (max-width: 600px) {
+    body {
+        padding: 2.5rem 1.5rem;
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 1.625rem;
+    }
+    
+    h2 {
+        font-size: 1.125rem;
+        margin-top: 2.5rem;
+    }
+    
+    figure {
+        padding: 1rem;
+        margin: 1.75rem 0;
+    }
+}
