@@ -27,7 +27,7 @@ const firstLayer = new Konva.Layer();
 // add the layer to our stage
 stage.add(firstLayer);
 
-// MAPPING LOGIC (Task 4, 5, 8):
+// MAPPING LOGIC :
 // The range input value (0-360) directly maps to HSL hue (0-360 degrees)
 // This is a 1:1 mapping since both use the same range
 // HSL was chosen because it provides a perceptually uniform color spectrum
@@ -67,7 +67,7 @@ function drawNewCircle(){
 
 circleButton.addEventListener("click", drawNewCircle);
 
-// VALIDATION (Task 6):
+// VALIDATION :
 // The range input has min="0" and max="360" attributes
 // This ensures the value is always between 0-360
 // HSL hue values outside 0-360 would still work (they wrap around)
