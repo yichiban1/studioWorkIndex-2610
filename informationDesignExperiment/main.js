@@ -7,7 +7,6 @@ const rangeSlider3 = document.getElementById("var3Range");
 const rangeSlider4 = document.getElementById("var4Range");
 
 //// UI INIT
-// here we're setting the default values of the sliders
 const range1DefaultValue = -6;
 const range2DefaultValue = 5;
 const range3DefaultValue = 50;
@@ -40,7 +39,6 @@ const filter = new Tone.Filter(0, "highpass");
 // this function only runs after user interaction : ie closing the into dialog
 // this is a special form of function using the async keyword : this lets us approach
 // the running of statements in a specific manner : for example in the below function
-// we use await to wait until the Tone system has started before running the following
 // statement which connects the synth to the audio output
 async function toneInit(){
     // "start" the tone audio system

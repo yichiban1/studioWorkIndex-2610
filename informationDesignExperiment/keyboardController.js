@@ -1,11 +1,10 @@
 
-// we can find all the active keys on our page by searching for both white keys and black
 // keys using their class and the adding (concatenating) them into a single list (array)
 const whiteKeys = document.getElementsByClassName("whiteKey");
 const blackKeys = document.getElementsByClassName("blackKey");
 const allKeys = Array.from(whiteKeys).concat(Array.from(blackKeys));
 
-// we can then run a forEach loop on every key, adding the appropriate eventListeners
+
 allKeys.forEach(key => {
    // runs when button held down over key
    key.addEventListener("mousedown", (e) => {
@@ -21,7 +20,6 @@ allKeys.forEach(key => {
        // now that we know the appropriate note an octave we can use it to trigger the
        // attack on our synth
        synth.triggerAttack(note+octave);
-       // finally we add some visual feedback by adding the class "activeKey"
        e.target.classList.add("activeKey");
    });
    // runs when button lifted over key
@@ -32,7 +30,6 @@ allKeys.forEach(key => {
        e.target.classList.remove("activeKey");
    });
    // runs once when cursor enters hovers over key
-   // we need to account for moving between keys with mouse button held down
    key.addEventListener("mouseenter", (e) => {
        // e.buttons will tell us which mouse button is currently active : a result of
        // 1 means the left mouse button, so if that is found we quit the function using
@@ -44,7 +41,6 @@ allKeys.forEach(key => {
        e.target.classList.add("activeKey");
    });
    // runs once when cursor leaves hover over key
-   // we don't need to worry about held buttons here, it's pretty much the same as the
    // mouseup function
    key.addEventListener("mouseleave", (e) => {
        synth.triggerRelease();
