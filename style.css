@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
 
 :root {
-    /* Macaron colors - fresh and soft*/
-    --bg: #fefcf8;
-    --bg-secondary: #fff9f0;
-    --text: #4a4a4a;
-    --text-secondary: #7a7a7a;
-    --text-muted: #a0a0a0;
+    /* Print-like color palette - warmer paper, deeper ink */
+    --bg: #fdf9f3;
+    --bg-secondary: #f9f4ec;
+    --text: #2d2d2d;
+    --text-secondary: #5a5a5a;
+    --text-muted: #8a8a8a;
     
     /* Macaron accent colors */
     --accent-pink: #f4d1d9;
@@ -16,10 +17,10 @@
     --accent-peach: #f8d7c2;
     --accent-mint: #d4f1e0;
     
-    /* Main accent color */
-    --accent: #7eb8c2;
-    --accent-dark: #5a9aa3;
-    --accent-light: #e8f4f6;
+    /* Main accent color - muted teal for print aesthetic */
+    --accent: #6ba8b5;
+    --accent-dark: #4a8a99;
+    --accent-light: #e0f0f3;
     
     /* Borders and shadows */
     --border: #f0ebe3;
@@ -52,36 +53,41 @@ main {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    /* Serif font for elegance */
+    font-family: 'Playfair Display', Georgia, serif;
     color: var(--text);
-    margin-bottom: 0.5rem;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 500;
     color: var(--accent-dark);
     margin-top: 3.5rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1.5px solid var(--accent-blue);
-    letter-spacing: 0.02em;
+    border-bottom: 2px solid var(--accent-blue);
+    letter-spacing: 0.01em;
+    /* Slight serif for section headers */
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 h3 {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
+    font-style: italic;
 }
 
 h4 {
     font-size: 1.05rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text);
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -90,16 +96,38 @@ h4 {
 }
 
 p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     text-align: justify;
     hyphens: auto;
+    /* First line indent for print feel */
+    text-indent: 2em;
+}
+
+/* Remove indent from first paragraph and after headings */
+section > p:first-of-type,
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+    text-indent: 0;
+}
+
+/* Drop cap for first paragraph of each section */
+section > p:first-of-type::first-letter {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5em;
+    float: left;
+    line-height: 0.8;
+    padding-right: 0.1em;
+    color: var(--accent-dark);
+    font-weight: 500;
 }
 
 a {
     color: var(--accent-dark);
     text-decoration: none;
     border-bottom: 1px solid var(--accent-blue);
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
     padding: 0 2px;
 }
 
@@ -135,12 +163,6 @@ figure {
     border-radius: 12px;
     box-shadow: 0 2px 8px var(--shadow);
     border: 1px solid var(--border);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-figure:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 figure img {
@@ -178,4 +200,42 @@ figcaption {
         padding: 1rem;
         margin: 1.75rem 0;
     }
+}
+
+/* Assignment Tabs */
+.assignment-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: white;
+    color: var(--text-secondary);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-blue);
+}
+
+.tab-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.assignment-content {
+    display: none;
+}
+
+.assignment-content.active {
+    display: block;
 }
