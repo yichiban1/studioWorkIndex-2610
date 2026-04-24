@@ -251,6 +251,7 @@
                 <p>
                     <strong>Technical Choice</strong>: Audio synthesis is implemented using Tone.js PolySynth with triangle-wave oscillators for softer timbre. The system maps typing speed to pitch through a pentatonic scale ( ['C3', 'D3', 'E3', 'G3', 'A3', 'C4', 'D4', 'E4', 'G4', 'A4', 'C5'] )—faster typing triggers higher notes creating an "upward" psychological suggestion, while hesitation produces lower sustained tones. Note selection uses randomized variation within range ( idx + Math.floor(Math.random() * 3) ) to prevent mechanical repetition. 
                 </p>
+                  <h4>Core Architecture</h4>
 
                 <figure>
                     <img src="pica008.png" alt="888">
@@ -304,19 +305,26 @@
             <section>
                 <h2>Date project development timeline</h2>
 
-                <h4>Core Architecture</h4>
+              
                  <figure>
                     <img src="pica010.png" alt="100">
                     <figcaption>Prototype Development Schedule</figcaption>
                 </figure>
             </section>
                 
-                <h4> Key Decisions</h4>
-                <p>1. Did not simplify prototype: All features (replay, save, stats) serve the core concept of "making process visible"
-                    <br>2. Avoided functional expansion: Resisted adding "useful" features like export formats, cloud sync, collaboration
-                    <br>3. Chose atmosphere over utility: Future development focuses on visual/audio atmosphere rather than tool features
+                <h4> A comprehensive rethinking of the project</h4>
+                <p>Typing differs from clicking and swiping—clicking provides a sense of completion, swiping provides trace information, while typing always serves the "content," and the process itself is eliminated. This is the "original sin" of typing: apart from the text content, the rhythm of typing itself has no independent meaning.</p>
+                <br>
+                    <p>Three unavoidable facts:</p>
+                    <br>
+                    <p>1.Randomly typing is meaningless and only constitutes a keyboard test.</p>
+
+<br><p>2.Typing speed itself is not an expression unless the user cares about what they are typing.</p>
+
+<br><p>3.Visual feedback is merely icing on the cake; it cannot stand alone as a means of expression.
                 </p>
 
+                <p><h4> A hypothetical next version of Between Typings: </h4>Preset text acts as a "score," which users "play" with their keyboards. The text is fixed, but each type, hesitation, and deletion leaves a physical imprint. Users aren't simply completing an input task; they're traversing a poem, leaving a unique visual trace. Visual feedback isn't reward or punishment, but rather makes the invisible emotional states of the process visible.</p>
 
                 <h4> Completion Status</h4>
                 <p>
